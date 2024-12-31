@@ -10,21 +10,32 @@ Return
 ; Pseudoclipboard
 ; ---------------------------------------------------------------------
 
-; DORMANT FOR NOW.
-;^Insert::
-;	Menu, Tray, Icon, %SystemRoot%\system32\imageres.dll, 77
-;	Input, PCLP, B M, {Enter}
-;	Menu, Tray, Icon, %A_AhkPath%, 0
-;	Return
 
-;+Insert::
-;	SendInput, %PCLP%
-;	Return
+; DORMANT FOR NOW.
+Insert & C::
+	if GetKeyState("Ctrl", "P")
+	{
+		Menu, Tray, Icon, %SystemRoot%\system32\imageres.dll, 77
+		Input, PCLP, B M, {Enter}
+		Menu, Tray, Icon, %A_AhkPath%, 0
+	} else {
+		PCLP := clipboard
+	}
+	Return
+
+
+Insert & V::	
+	SendInput, %PCLP%
+	Return
 
 ; ---------------------------------------------------------------------
 ; CONVENIENCE MAPPINGS
 ; ---------------------------------------------------------------------
 
+
+
+
+^+CapsLock:: Enter	; Ctrl+CapsLock is an Enter: Left side ftw
 +CapsLock:: CapsLock	; Shift+CapsLock works as CapsLock now
 CapsLock:: BackSpace	; In particular, ctrl+capslock, etc. as well.
 	
