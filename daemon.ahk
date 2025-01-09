@@ -137,5 +137,5 @@ Insert & 2::
 	Return
 
 Insert & 1::
-	Run, pwsh
+	Run, wt
 	Return
