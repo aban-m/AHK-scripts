@@ -3,7 +3,7 @@ global temperature := 0.7
 global max_tokens := 250
 global model := "gpt-4o"
 
-system_prompts := ["Answer in code. No comment, no markdown, just code. if Latex, delimit with $$. assume python by default. do not import libraries, do not give example.", "Respond in powershell code, no comment and no markdown, just code. It will be executed as-is.", "", "", "", "", "", "", "You are a helpful assistant. Give brief answers.", "correct my language as is, no modifications"]
+system_prompts := ["Answer in code. No comment, no markdown, just code. if Latex, delimit with $$. assume python by default. do not import libraries, do not give example.", "Respond in powershell code, no comment and no markdown, just code. It will be executed as-is.", "", "", "", "", "", "", "You are a helpful assistant. Give brief answers.", "correct my language as is, no modifications. if the text is in different language, just translate to english as is."]
 
 global system_prompt := system_prompts[8]
 
