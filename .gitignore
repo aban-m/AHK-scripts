@@ -1,3 +1,5 @@
 _*
 *.py[cod]
 gptdaemon/*.exe
+__pycache__/**
+*.jpg
